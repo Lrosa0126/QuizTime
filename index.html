@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Fundamentals Quiz</title>
+  <style>
+    /* Add your custom CSS styles here if needed */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>JavaScript Fundamentals Quiz</h1>
+    </header>
+    <main>
+      <section id="start-screen">
+        <h2>Welcome to the Quiz</h2>
+        <p>Test your knowledge of JavaScript fundamentals! Click the Start button to begin.</p>
+        <button id="start-button">Start</button>
+      </section>
+
+      <section id="quiz" style="display: none;">
+        <h2>Question</h2>
+        <p id="question-text"></p>
+        <ul id="choices">
+          <!-- The answer choices will be dynamically added using JavaScript -->
+        </ul>
+        <p id="feedback"></p>
+      </section>
+
+      <section id="game-over" style="display: none;">
+        <h2>Quiz Over!</h2>
+        <p>Your score: <span id="final-score"></span></p>
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" maxlength="3" placeholder="Your initials" required>
+        <button id="submit-score">Submit</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2023 Your Coding Boot Camp</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
