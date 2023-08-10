@@ -6,7 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Fundamentals Quiz</title>
   <style>
-    /* Add your custom CSS styles here if needed */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      animation: fadeInOut 5s;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
@@ -25,10 +45,9 @@
       <section id="quiz" style="display: none;">
         <h2>Question</h2>
         <p id="question-text"></p>
-        <ul id="choices">
-          <!-- The answer choices will be dynamically added using JavaScript -->
-        </ul>
+        <ul id="choices"></ul>
         <p id="feedback"></p>
+        <div id="countdown">Time remaining: <span id="timer">60</span> seconds</div>
       </section>
 
       <section id="game-over" style="display: none;">
@@ -38,7 +57,14 @@
         <input type="text" id="initials" maxlength="3" placeholder="Your initials" required>
         <button id="submit-score">Submit</button>
       </section>
+
+      <section id="high-scores" style="display: none;">
+        <h2>High Scores</h2>
+        <ul id="high-scores-list"></ul>
+      </section>
     </main>
+
+    <div id="popup" class="popup" style="display: none;"></div>
 
     <footer>
       <p>© 2023 Your Coding Boot Camp</p>
